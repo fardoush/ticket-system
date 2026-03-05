@@ -5,7 +5,7 @@ import CustomerTricket from "./Components/CustomerTricket/CustomerTricket";
 import Header from "./Components/Header/Header";
 import TaskStatus from "./Components/TaskStatus/TaskStatus";
 import { ToastContainer, toast } from "react-toastify";
-import ResolveStatus from "./Components/ResolveStatus/ResolveStatus";
+import Footer from "./Components/Footer/Footer";
 
 const tricketPromise = fetch("/customerTricket.json").then((res) => res.json());
 
@@ -19,7 +19,7 @@ function App() {
       <Header />
       <Banner tricketstatus={tricketstatus} resolved={resolved} />
 
-      <section className="lg:container w-full mx-auto flex flex-col md:flex-row gap-8">
+      <section className="lg:container w-full mx-auto lg:py-20 md:py-16 py-8  px-4 md:px-6 flex flex-col md:flex-row gap-8">
         <div className="flex-1">
           <h2 className="text-2xl font-bold text-[#334155] border-b-2 border-blue-400 pb-2 mb-6 inline-block w-full">
             Customer Tickets
@@ -50,7 +50,7 @@ function App() {
             resolved={resolved}
             setResolved={setResolved}
           />
-          <h3 className="text-xl font-bold text-[#334155] mb-2">
+          <h3 className="text-xl font-bold text-[#334155] my-2">
             Resolve Status
           </h3>
 
@@ -64,6 +64,8 @@ function App() {
           <ToastContainer />
         </div>
       </section>
+
+      <Footer/>
     </>
   );
 }

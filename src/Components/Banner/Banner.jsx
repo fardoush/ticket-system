@@ -4,7 +4,7 @@ import vector2 from "../../assets/right-img.png";
 
 const Banner = ({tricketstatus,resolved }) => {
   return (
-    <div className="lg:container w-full mx-auto py-20 grid md:grid-cols-2 grid-cols-1 gap-8">
+    <div className="lg:container w-full mx-auto lg:py-20 md:py-14 py-8 px-4 md:px-6 grid md:grid-cols-2 grid-cols-1 gap-8">
       <div className="relative h-60 rounded-xl overflow-hidden bg-gradient-to-r from-[#632EE3] to-[#9F62F2]">
         <div
           className="absolute left-0 top-0 h-full w-1/2 bg-no-repeat bg-left bg-contain opacity-50"
