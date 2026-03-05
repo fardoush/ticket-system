@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <Header />
-      <Banner tricketstatus={tricketstatus} inProgress={inProgress} resolved={resolved} />
+      <Banner tricketstatus={tricketstatus} resolved={resolved}/>
 
       <section className="lg:container w-full mx-auto flex flex-col md:flex-row gap-8">
         <div className="flex-1">
@@ -42,13 +42,13 @@ function App() {
           <h3 className="text-xl font-bold text-[#334155] mb-2">Task Status</h3>
           <TaskStatus
             tricketstatus={tricketstatus}
+            setTricketStatus={setTricketStatus}
             inProgress={inProgress}
             setInProgress={setInProgress}
             resolved={resolved}
             setResolved={setResolved}
           />
                     <h3 className="text-xl font-bold text-[#334155] mb-2">Resolve Status</h3>
-<h2 className="text-center text-white text-5xl">{resolved}</h2>
 
 
         </div>

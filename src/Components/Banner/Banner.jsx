@@ -39,7 +39,7 @@ const Banner = ({tricketstatus,resolved }) => {
 
         <div className="relative flex flex-col items-center justify-center h-full gap-4 ">
           <h4 className="text-center text-white text-2xl">Resolved</h4>
-          <h2 className="text-center text-white text-5xl">{resolved}</h2>
+          <h2 className="text-center text-white text-5xl">{resolved.length}</h2>
         </div>
         {/* <div
           className="absolute h-full w-full inset-0 bg-no-repeat bg-right bg-contain z-10"

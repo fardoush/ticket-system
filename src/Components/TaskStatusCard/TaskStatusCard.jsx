@@ -1,10 +1,14 @@
 import React from 'react';
 
-const TaskStatusCard = ({status}) => {
-    const {title} = status;
+const TaskStatusCard = ({status,tricketstatus,setTricketStatus,resolved,setResolved}) => {
+    const {id,title} = status;
 
     const handleComplete = () => {
       console.log("Complete Btn Click")
+      setResolved([...resolved, status]);
+      const remainingInprogress = tricketstatus.filter(item => item.id !== id)
+      setTricketStatus(remainingInprogress);
+      // setResolved(resolved)
     }
     return (
         <div className="card w-full bg-base-100 card-xs shadow-sm">
