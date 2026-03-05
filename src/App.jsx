@@ -4,6 +4,7 @@ import Banner from "./Components/Banner/Banner";
 import CustomerTricket from "./Components/CustomerTricket/CustomerTricket";
 import Header from "./Components/Header/Header";
 import TaskStatus from "./Components/TaskStatus/TaskStatus";
+  import { ToastContainer, toast } from 'react-toastify';
 
 const tricketPromise = fetch("/customerTricket.json").then((res) => res.json());
 
@@ -51,6 +52,7 @@ function App() {
                     <h3 className="text-xl font-bold text-[#334155] mb-2">Resolve Status</h3>
 
 
+    <ToastContainer />
         </div>
       </section>
     </>

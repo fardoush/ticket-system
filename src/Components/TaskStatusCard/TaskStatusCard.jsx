@@ -1,10 +1,13 @@
 import React from 'react';
+import { toast } from 'react-toastify';
+
+
 
 const TaskStatusCard = ({status,tricketstatus,setTricketStatus,resolved,setResolved}) => {
     const {id,title} = status;
 
     const handleComplete = () => {
-      console.log("Complete Btn Click")
+      toast.success("Customer Tricket Completed!");
       setResolved([...resolved, status]);
       const remainingInprogress = tricketstatus.filter(item => item.id !== id)
       setTricketStatus(remainingInprogress);
@@ -16,6 +19,7 @@ const TaskStatusCard = ({status,tricketstatus,setTricketStatus,resolved,setResol
     <h2 className="card-title text-xl mb-6">{title}</h2>
     <div className=" card-actions">
       <button onClick={handleComplete} className="btn btn-wide btn-success">Completed</button>
+  
     </div>
   </div>
 </div>
